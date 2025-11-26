@@ -1,4 +1,4 @@
-Video how loadeer work
+Video how loader work
 https://github.com/user-attachments/assets/b6a71a74-571f-4059-acba-bc3846e79d04
 
 glass screenshot
