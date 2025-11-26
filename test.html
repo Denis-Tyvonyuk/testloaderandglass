@@ -1,57 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
-    <style type="text/css">
-      body {
-        height: 100vh;
-        margin: 0;
-      }
-      .body {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        height: 100%;
-      }
+<style>
+ 
+  :root {
+    --color: #1e00ff;
+   
+  }
 
-      .loader {
-        width: 45px;
-        aspect-ratio: 0.75;
-        --c: no-repeat linear-gradient(#000 0 0);
-        background: var(--c) 0% 50%, var(--c) 20% 50%, var(--c) 40% 50%,
-          var(--c) 60% 50%, var(--c) 80% 50%, var(--c) 100% 50%;
-        background-size: 20% 0%;
-        animation: l7 1.5s infinite;
-      }
-      @keyframes l7 {
-        0%,
-        100% {
-          background-size: 20% 0%, 20% 0%, 20% 0%, 20% 0%, 20% 0%, 20% 0%;
-        }
-        16.67% {
-          background-size: 20% 100%, 20% 0%, 20% 0%, 20% 0%, 20% 0%, 20% 0%;
-        }
-        33.33% {
-          background-size: 20% 100%, 20% 100%, 20% 0%, 20% 0%, 20% 0%, 20% 0%;
-        }
-        50% {
-          background-size: 20% 100%, 20% 100%, 20% 100%, 20% 100%, 20% 100%,
-            20% 100%;
-        }
-        66.67% {
-          background-size: 20% 0%, 20% 0%, 20% 100%, 20% 100%, 20% 100%, 20% 0%;
-        }
-        83.33% {
-          background-size: 20% 0%, 20% 0%, 20% 0%, 20% 0%, 20% 100%, 20% 0%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="body">
-      <div class="loader"></div>
-    </div>
-  </body>
-</html>
+  .loader {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+
+
+.cell {
+  opacity: 0;
+  width: 100%;
+  background: #514b82;
+  border-radius: 4px;
+}
+
+.cell:nth-child(1) { height: 10px; }
+.cell:nth-child(2) { height: 40px; }
+.cell:nth-child(3) { height: 60px; }
+.cell:nth-child(4) { height: 25px; }
+.cell:nth-child(5) { height: 40px; }
+.cell:nth-child(6) { height: 60px; }
+.cell:nth-child(7) { height: 60px; }
+.cell:nth-child(8) { height: 25px; }
+.cell:nth-child(9) { height: 10px; }
+
+.cell:nth-child(1) { animation: show1 2s steps(9) infinite; }
+.cell:nth-child(2) { animation: show2 2s steps(9) infinite; }
+.cell:nth-child(3) { animation: show3 2s steps(9) infinite; }
+.cell:nth-child(4) { animation: show4 2s steps(9) infinite; }
+.cell:nth-child(5) { animation: show5 2s steps(9) infinite; }
+.cell:nth-child(6) { animation: show6 2s steps(9) infinite; }
+.cell:nth-child(7) { animation: show7 2s steps(9) infinite; }
+.cell:nth-child(8) { animation: show8 2s steps(9) infinite; }
+.cell:nth-child(9) { animation: show9 2s steps(9) infinite; }
+
+
+@keyframes show1 {
+  0%   { opacity: 1; }
+  11.11% { opacity: 0; }
+}
+@keyframes show2 {
+  11.11% { opacity: 1; }
+  22.22% { opacity: 0; }
+}
+@keyframes show3 {
+  22.22% { opacity: 1; }
+  33.33% { opacity: 0; }
+}
+@keyframes show4 {
+  33.33% { opacity: 1; }
+  44.44% { opacity: 0; }
+}
+@keyframes show5 {
+  44.44% { opacity: 1; }
+  55.55% { opacity: 0; }
+}
+@keyframes show6 {
+  55.55% { opacity: 1; }
+  66.66% { opacity: 0; }
+}
+@keyframes show7 {
+  66.66% { opacity: 1; }
+  77.77% { opacity: 0; }
+}
+@keyframes show8 {
+  77.77% { opacity: 1; }
+  88.88% { opacity: 0; }
+}
+@keyframes show9 {
+  88.88% { opacity: 1; }
+  100%   { opacity: 0; }
+}
+
+
+</style>
+
+
+<div class="loader">
+  <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+</div>
